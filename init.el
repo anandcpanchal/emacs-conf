@@ -5,6 +5,13 @@
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
+;;Remap control key to command key
+(setq mac-command-modifier 'control)
+
+;;Remap delete key to C-h and help to C-x h
+(global-set-key [?\C-h] 'delete-backward-char)
+(global-set-key [?\C-x ?h] 'help-command)
+
 ;;Load theme
 (load-theme 'tango-dark t)
 
@@ -23,3 +30,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
